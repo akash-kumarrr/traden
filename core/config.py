@@ -5,10 +5,14 @@ class Settings(BaseSettings):
     version : str
     description : str
 
+    db_url : str 
+
     jwt_secret_key : str
     jwt_access_time : int
     jwt_algorithm : str
 
+
+    groq_api_key : str
     model_config = SettingsConfigDict(
         env_file=".env",
         env_file_encoding="utf-8"
